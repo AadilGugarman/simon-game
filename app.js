@@ -16,6 +16,12 @@ document.addEventListener("keypress", () => {
     levelUp();
   }
 });
+document.addEventListener("click", () => {
+  if (gameStarted == false) {
+    gameStarted = true;
+    levelUp();
+  }
+});
 resetBtn.addEventListener("click", () => {
   if (gameStarted == false) {
     gameStarted == true;
