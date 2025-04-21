@@ -52,8 +52,8 @@ h2 {
 }
 .box:focus,
 .box:active {
-  outline: none;
-  box-shadow: none;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .box:hover {

@@ -70,6 +70,7 @@ const flash = (color) => {
 let boxes = document.querySelectorAll(".box");
 for (let box of boxes) {
   box.addEventListener("click", userGame);
+  box.blur();
 }
 
 const resetGame = () => {
