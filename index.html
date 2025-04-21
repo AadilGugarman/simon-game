@@ -3,30 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Simon Game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="game">
-      <h1>simon game</h1>
-      <h3>press any key to start</h3>
-      <h3>follow the pattern</h3>
-      <h3>click on the boxes in the correct order</h3>
+      <h1><i>Simon Game</i></h1>
+      <h2 class="gameUpdate">
+        press any key to start <br />follow the pattern
+      </h2>
     </div>
     <div class="container">
       <div class="boxes">
         <div class="line1">
-          <div class="box purple">1</div>
-          <div class="box orange">2</div>
+          <div class="box purple" id="purple"></div>
+          <div class="box orange" id="orange"></div>
         </div>
         <div class="line2">
-          <div class="box teal">3</div>
-          <div class="box pink">4</div>
+          <div class="box teal" id="teal"></div>
+          <div class="box pink" id="pink"></div>
         </div>
       </div>
-      <div class="reset">
-        <button>Reset Game</button>
+      <div class="buttons">
+        <button class="resetBtn">Reset Game</button>
+        <button class="toggleBtn">Dark/Light Mode</button>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

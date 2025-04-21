@@ -16,6 +16,9 @@
   font-size: 40px;
   font-weight: 600;
 }
+h2 {
+  text-align: center;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -35,7 +38,7 @@
   padding: 10px;
 }
 
-.boxes .box {
+.box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,32 +49,35 @@
   margin-bottom: 10px;
   text-align: center;
 }
-.boxes .box:hover {
+.box:hover {
   opacity: 0.5;
 }
-.boxes .box.purple {
+.purple {
   background-color: #9b59b6;
   border-top-left-radius: 100%;
 }
-.boxes .box.orange {
+.orange {
   background-color: #e67e22;
   border-bottom-left-radius: 100%;
 }
-.boxes .box.teal {
+.teal {
   background-color: #1abc9c;
   border-top-right-radius: 100%;
 }
-.boxes .box.pink {
+.pink {
   background-color: #e91e63;
   border-bottom-right-radius: 100%;
 }
-.reset {
+.buttons {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
-.reset button {
+.resetBtn,
+.toggleBtn {
   width: 150px;
   height: 50px;
   background-color: #000;
@@ -82,8 +88,17 @@
   font-weight: 600;
   color: #fff;
 }
-.reset button:hover {
+.resetBtn:hover,
+.toggleBtn:hover {
   background-color: #fff;
   color: #000;
   border: 1px solid #000;
+}
+.toggle {
+  background-color: #000;
+  color: #fff;
+}
+.flash {
+  background-color: #fff;
+  border: 3px solid #000;
 }
