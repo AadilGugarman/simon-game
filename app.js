@@ -55,7 +55,6 @@ const checkAns = (idx) => {
 
 const userGame = (event) => {
   let userColor = event.target;
-  userColor.blur();
   flash(userColor);
   userSeq.push(userColor.getAttribute("id"));
   checkAns(userSeq.length - 1);
@@ -72,6 +71,10 @@ let boxes = document.querySelectorAll(".box");
 for (let box of boxes) {
   box.addEventListener("click", userGame);
 }
+box.addEventListener("click", (event) => {
+  box.blur();
+  event.preventDefault();
+});
 
 const resetGame = () => {
   level = 0;
