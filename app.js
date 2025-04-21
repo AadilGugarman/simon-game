@@ -10,18 +10,15 @@ let body = document.querySelector("body");
 
 let colorBox = ["purple", "orange", "pink", "teal"];
 
-document.addEventListener("keypress", () => {
-  if (gameStarted == false) {
-    gameStarted = true;
-    levelUp();
-  }
+["touchstart", "keypress"].forEach((event) => {
+  document.addEventListener(event, () => {
+    if (gameStarted == false) {
+      gameStarted = true;
+      levelUp();
+    }
+  });
 });
-document.addEventListener("click", () => {
-  if (gameStarted == false) {
-    gameStarted = true;
-    levelUp();
-  }
-});
+
 resetBtn.addEventListener("click", () => {
   if (gameStarted == false) {
     gameStarted == true;
@@ -34,7 +31,6 @@ const levelUp = () => {
   level++;
   gameUpdate.innerText = `Level ${level}`;
   let randIdx = Math.floor(Math.random() * 4);
-  console.log(randIdx);
   let randBox = colorBox[randIdx];
   let randColor = document.querySelector(`.${randBox}`);
   compSeq.push(randBox);
@@ -61,7 +57,6 @@ const userGame = (event) => {
   let userColor = event.target;
   flash(userColor);
   userSeq.push(userColor.getAttribute("id"));
-  console.log(userSeq);
   checkAns(userSeq.length - 1);
 };
 
