@@ -64,7 +64,7 @@ const flash = (color) => {
   color.classList.add("flash");
   setTimeout(() => {
     color.classList.remove("flash");
-  }, 500);
+  }, 700);
 };
 
 let boxes = document.querySelectorAll(".box");
